@@ -30,17 +30,17 @@ class Repository(private val tmdbAPI: TmdbAPI, private val dbFilm: FilmDao) {
 
     // DB
 
-//    FILM
+    // FILM
     suspend fun getFavFilms() = dbFilm.getFavFilms()
     suspend fun notFavFilm(id: Int) = dbFilm.deleteFilm(id)
     suspend fun isFavFilm(movie: Movie) = dbFilm.insertFilm(FilmEntity(fiche = movie, id = movie.id.toString()))
 
-//    SERIE
+    // SERIE
     suspend fun getFavSeries() = dbFilm.getFavSeries()
     suspend fun notFavSerie(id: Int) = dbFilm.deleteSerie(id)
     suspend fun isFavSerie(serie: Serie) = dbFilm.insertSerie(SerieEntity(fiche = serie, id = serie.id.toString()))
 
-//    ACTEUR
+    // ACTEUR
     suspend fun gatFavActeurs() = dbFilm.getFavActeurs()
     suspend fun notFavActeur(id: Int) = dbFilm.deleteActeur(id)
     suspend fun isFavActeur(acteur: Person) = dbFilm.insertActeur(ActeurEntity(fiche = acteur, id = acteur.id.toString()))

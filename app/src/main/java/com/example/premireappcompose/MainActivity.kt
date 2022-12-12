@@ -168,7 +168,9 @@ fun SearchView(onSearch: (t:String)->Unit, onToggleSearch: () -> Unit) {
         textStyle = TextStyle(color = Color.White, fontSize = 18.sp),
         leadingIcon = {
             IconButton(onClick = { onToggleSearch()
-            }) {
+            },
+                modifier = Modifier.padding(1.dp,0.dp,0.dp,0.dp)
+            ) {
                 Icon(Icons.Filled.ArrowBack, "backIcon")
             }
         },
@@ -224,29 +226,32 @@ fun DefaultTopBar(onToggleSearch: () -> Unit, navController:NavController, curre
             }
         },
         actions = {
-            IconButton(onClick = { onToggleSearch() }) {
-                Icon(
-                    Icons.Default.Search,
-                    contentDescription = "",
-                    modifier = Modifier
-                        .padding(15.dp)
-                        .size(24.dp)
-                )
-            }
-            IconButton(onClick = {
-                if (currentDestination != null) {
-                    navController.navigate("favorites/${currentDestination.route}")
-                }
-            }
+            if (currentDestination != null) {
+                if (currentDestination.route != "detailTv/{id}" && currentDestination.route != "detail/{id}") {
+                    IconButton(onClick = { onToggleSearch() }) {
+                        Icon(
+                            Icons.Default.Search,
+                            contentDescription = "",
+                            modifier = Modifier
+                                .padding(15.dp)
+                                .size(24.dp)
+                        )
+                    }
 
-            ) {
-                Icon(
-                    Icons.Filled.FavoriteBorder,
-                    contentDescription = "favorite page",
-                    modifier = Modifier
-                        .padding(15.dp)
-                        .size(24.dp)
-                )
+                    IconButton(onClick = {
+                        navController.navigate("favorites/${currentDestination.route}")
+                    }
+
+                    ) {
+                        Icon(
+                            Icons.Filled.FavoriteBorder,
+                            contentDescription = "favorite page",
+                            modifier = Modifier
+                                .padding(15.dp)
+                                .size(24.dp)
+                        )
+                    }
+                }
             }
         },
         backgroundColor = colorResource(id = R.color.purple_500),

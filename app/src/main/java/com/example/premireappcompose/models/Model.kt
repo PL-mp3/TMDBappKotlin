@@ -7,7 +7,6 @@ data class TmdbResultMovies(
     val total_results: Int
 )
 
-
 data class MovieDetail(
     val isFav: Boolean = false,
     val adult: Boolean = false,
