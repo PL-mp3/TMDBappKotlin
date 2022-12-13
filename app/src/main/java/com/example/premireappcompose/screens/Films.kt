@@ -123,7 +123,7 @@ fun Films(viewModel: MainViewModel, navController: NavController) {
                                     .padding(5.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(text = (movie.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    Text(text = (movie.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center,color = Color.White)
                                     CircularProgressIndicator(
                                         color = Color(0xFF001438),
                                         progress = 100f
@@ -350,7 +350,7 @@ fun FavorisFilms(viewModel: MainViewModel, navController: NavController) {
                                     .padding(5.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(text = (movie.fiche.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    Text(text = (movie.fiche.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center,color = Color.White)
                                     CircularProgressIndicator(
                                         color = Color(0xFF001438),
                                         progress = 100f
@@ -656,7 +656,7 @@ fun Series(viewModel: MainViewModel, navController: NavController) {
                                     .padding(5.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(text = (serie.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    Text(text = (serie.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center,color = Color.White)
                                     CircularProgressIndicator(
                                         color = Color(0xFF001438),
                                         progress = 100f
@@ -778,7 +778,7 @@ fun FavorisSeries(viewModel: MainViewModel, navController: NavController) {
                                     .padding(5.dp),
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text(text = (serie.fiche.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    Text(text = (serie.fiche.vote_average * 10.0).roundToInt().toString()+" %",fontSize = 10.sp, textAlign = TextAlign.Center,color = Color.White)
                                     CircularProgressIndicator(
                                         color = Color(0xFF001438),
                                         progress = 100f

@@ -227,7 +227,7 @@ fun DefaultTopBar(onToggleSearch: () -> Unit, navController:NavController, curre
         },
         actions = {
             if (currentDestination != null) {
-                if (currentDestination.route != "detailTv/{id}" && currentDestination.route != "detail/{id}") {
+                if (currentDestination.route != "detailTv/{id}" && currentDestination.route != "detail/{id}" && currentDestination.route != "favorites/films" && currentDestination.route != "favorites/series" && currentDestination.route != "favorites/acteurs") {
                     IconButton(onClick = { onToggleSearch() }) {
                         Icon(
                             Icons.Default.Search,
