@@ -1,4 +1,4 @@
-package com.example.premireappcompose
+package com.example.premireappcompose.screens
 
 import android.content.Intent
 import android.net.Uri
@@ -18,10 +18,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.premireappcompose.ui.theme.PremièreAppComposeTheme
+import com.example.premireappcompose.R
 
 
 @Composable

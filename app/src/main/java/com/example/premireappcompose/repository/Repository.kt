@@ -1,6 +1,7 @@
-package com.example.premireappcompose
+package com.example.premireappcompose.repository
 
 import com.example.premireappcompose.DAO.FilmDao
+import com.example.premireappcompose.models.*
 import com.example.premireappcompose.entities.ActeurEntity
 import com.example.premireappcompose.entities.FilmEntity
 import com.example.premireappcompose.entities.SerieEntity

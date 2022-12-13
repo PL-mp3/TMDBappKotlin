@@ -3,6 +3,8 @@ package com.example.premireappcompose
 import android.content.Context
 import androidx.room.Room
 import com.example.premireappcompose.DAO.FilmDao
+import com.example.premireappcompose.repository.Repository
+import com.example.premireappcompose.repository.TmdbAPI
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides
@@ -51,7 +53,7 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun provideRepository(api: TmdbAPI,db: FilmDao): Repository {
+    fun provideRepository(api: TmdbAPI, db: FilmDao): Repository {
         return Repository(api, db)
     }
 }

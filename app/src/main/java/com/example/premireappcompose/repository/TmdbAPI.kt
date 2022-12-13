@@ -1,8 +1,7 @@
-package com.example.premireappcompose
+package com.example.premireappcompose.repository
 
-import kotlinx.coroutines.flow.MutableStateFlow
-import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import com.example.premireappcompose.*
+import com.example.premireappcompose.models.*
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

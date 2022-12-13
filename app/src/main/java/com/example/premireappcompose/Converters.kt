@@ -2,6 +2,9 @@ package com.example.premireappcompose
 
 import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
+import com.example.premireappcompose.models.Movie
+import com.example.premireappcompose.models.Person
+import com.example.premireappcompose.models.Serie
 import com.squareup.moshi.Moshi
 
 @ProvidedTypeConverter
